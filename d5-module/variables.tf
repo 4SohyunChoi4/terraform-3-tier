@@ -1,0 +1,36 @@
+# 루트 variables.tf : 실제 값을 가진 곳 (기본값 유지)
+# 모듈 variables.tf : 밖에서 받을 값의 자리만 정의함.
+variable "region" {
+  type    = string
+  default = "ap-northeast-2"
+}
+
+variable "project" {
+  type    = string
+  default = "tf-lab"
+}
+
+variable "vpc_cidr" {
+  type    = string
+  default = "10.0.0.0/16"
+}
+
+variable "public_subnet_cidrs" {
+  type    = list(string)
+  default = ["10.0.1.0/24", "10.0.2.0/24"]
+}
+
+variable "private_subnet_cidrs" {
+  type    = list(string)
+  default = ["10.0.11.0/24", "10.0.12.0/24"]
+}
+
+variable "instance_type" {
+  type    = string
+  default = "t3.micro"
+}
+
+variable "asg_desired" {
+  type    = number
+  default = 2
+}
