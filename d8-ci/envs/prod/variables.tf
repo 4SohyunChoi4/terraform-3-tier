@@ -1,0 +1,11 @@
+variable "region" { type = string }
+variable "project" { type = string }
+variable "env" { type = string }
+variable "vpc_cidr" { type = string }
+variable "public_subnet_cidrs" { type = list(string) }
+variable "private_subnet_cidrs" { type = list(string) }
+variable "instance_type" { type = string }
+variable "asg_desired" { type = number }
+variable "db_instance_class" { type = string }
+variable "backup_retention_period" { type = number }
+variable "multi_az" { type = bool }

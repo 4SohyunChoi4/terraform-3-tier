@@ -1,0 +1,11 @@
+region                  = "ap-northeast-2"
+project                 = "tf-lab"
+env                     = "dev"
+vpc_cidr                = "10.10.0.0/16"
+public_subnet_cidrs     = ["10.10.1.0/24", "10.10.2.0/24"]
+private_subnet_cidrs    = ["10.10.11.0/24", "10.10.12.0/24"]
+instance_type           = "t3.micro"
+asg_desired             = 1
+db_instance_class       = "db.t3.micro"
+backup_retention_period = 0
+multi_az                = false
