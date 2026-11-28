@@ -52,6 +52,9 @@ aws s3 ls s3://sohyun-tf-state-1234/d6-env/ --recursive
 | 백업 보관 | 0일 | 7일 |
 | Multi-AZ | false | true |
 
+prod는 리소스가 총 27개 생성된다.
+Plan: 27 to add, 0 to change, 0 to destroy.
+
 **키포인트**
 - 같은 모듈을 환경 폴더에서 호출하고, 환경별 차이는 `terraform.tfvars`로만 준다.
 - state는 환경마다 key를 나눠서 dev와 prod가 서로 영향을 주지 않게 한다.

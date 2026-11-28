@@ -65,4 +65,3 @@ resource "aws_secretsmanager_secret_version" "db" {
     dbname   = aws_db_instance.main.db_name
   })
 }
-ㅌ
